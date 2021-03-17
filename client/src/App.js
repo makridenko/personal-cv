@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+/* React */
+import React from 'react';
 
-function App() {
+/* Containers */
+import Header from './containers/Header';
+
+/* Styles */
+import styled from 'styled-components';
+
+/* Styled components */
+const StyledApp = styled.div`
+  background: #201A1A;
+  height: 100vh;
+  padding: 0;
+`;
+
+const Content = styled.div`
+  border: 1px solid tomato;
+  margin: 0 128px;
+
+  @media (max-width: 768px) {
+    margin: 0 34px;
+  }
+
+  @media (max-width: 375px) {
+    margin: 0 15.5px;
+  }
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <Content>
+        <Header />
+      </Content>
+    </StyledApp>
   );
 }
 
