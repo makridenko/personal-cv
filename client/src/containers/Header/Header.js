@@ -4,48 +4,49 @@ import React from 'react';
 /* Style */
 import styled from 'styled-components';
 
+/* Components */
+import CVAvatar from '../../components/CVAvatar';
+import Greetings from '../../components/Greetings';
+
 /* Styled components */
 const StyledHeader = styled.div`
-    color: #fff;
     width: 100%;
-    padding-top: 152px;
-
-    @media (max-width: 768px) {
-        padding-top: 192px;
-    }
-
-    @media (max-width: 375px) {
-        padding-top: 200px;
-    }
 `;
 
 const InfoContainer = styled.div`
     display: flex;
-    border: 1px solid pink;
+    margin-top: 152px;
+
+    @media (max-width: 768px) {
+        margin-top: 192px;
+    }
 
     @media (max-width: 375px) {
         flex-direction: column-reverse;
+        margin-top: 200px;
     }
 `;
 
 const GreetContainer = styled.div`
-    height: 10px;
     width: 100%;
-    background-color: blue;
 `;
 
 const ImageContainer = styled.div`
-    height: 10px;
-    width: 100%;
-    background-color: tomato;
+    display: flex;
+    flex-direction: row-reverse;
 `;
 
 
 const Header = () => (
     <StyledHeader>
         <InfoContainer>
-            <GreetContainer />
-            <ImageContainer />
+            <GreetContainer>
+                <Greetings />
+            </GreetContainer>
+
+            <ImageContainer>
+                <CVAvatar />
+            </ImageContainer>
         </InfoContainer>
     </StyledHeader>
 );
