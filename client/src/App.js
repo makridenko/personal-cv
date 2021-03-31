@@ -12,18 +12,21 @@ const StyledApp = styled.div`
   background: #201A1A;
   height: 100vh;
   padding: 0;
+  display: flex;
+  justify-content: center;
 `;
 
 const Content = styled.div`
-  border: 1px solid tomato;
-  margin: 0 128px;
+  max-width: 1440px;
+  padding: 0 128px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    margin: 0 34px;
+    padding: 0 34px;
   }
 
   @media (max-width: 375px) {
-    margin: 0 15.5px;
+    padding: 0 16px;
   }
 `;
 
