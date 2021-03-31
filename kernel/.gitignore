@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+webclient/
+local_settings.py
+*.sqlite3
+static/
+*.code-workspace
