@@ -2,12 +2,14 @@
 
 import os
 
-from .local_settings import (
-    SECRET_KEY, DEBUG, ALLOWED_HOSTS,
-)
+from .local_settings import ALLOWED_HOSTS
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+DEBUG = os.getenv('DEBUG')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
