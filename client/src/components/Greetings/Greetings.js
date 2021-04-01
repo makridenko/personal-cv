@@ -108,7 +108,7 @@ const Greetings = () => {
         <StyledGreetings>
             <TitleContainer>
                 <h1>Алексей Макриденко,</h1>
-                <h1>full-stack developer.</h1>
+                <h1>люблю Катю.</h1>
             </TitleContainer>
             <Links />
         </StyledGreetings>
