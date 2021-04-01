@@ -1,0 +1,21 @@
+name: Deploy Workflow
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to production server
+        uses: appleboy/ssh-action@master
+        with:
+          host: http://188.225.77.236/
+          username: developer
+          key: ${{ secrets.ID_RSA }}
+          port: 22
+          script: |
+            cd personal-cv
+            git pull origin master
+            git status
