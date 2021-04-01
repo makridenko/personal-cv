@@ -17,4 +17,4 @@ jobs:
           script: |
             cd personal-cv
             git pull origin master
-            git status
+            bash deploy.sh
