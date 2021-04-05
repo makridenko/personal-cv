@@ -7,26 +7,29 @@ import Header from './containers/Header';
 /* Styles */
 import styled from 'styled-components';
 
+/* UI-Kit */
+import { device } from './ui-kit/css-devices';
+
 /* Styled components */
 const StyledApp = styled.div`
   background: #201A1A;
-  height: 100vh;
+  height: 100%;
   padding: 0;
   display: flex;
   justify-content: center;
 `;
 
 const Content = styled.div`
-  max-width: 1440px;
-  padding: 0 128px;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    padding: 0 34px;
+  @media ${device.desktop} {
+    width: 1440px;
   }
 
-  @media (max-width: 375px) {
-    padding: 0 16px;
+  @media ${device.tablet} {
+    width: 768px;
+  }
+
+  @media ${device.mobile} {
+    width: 375px;
   }
 `;
 
