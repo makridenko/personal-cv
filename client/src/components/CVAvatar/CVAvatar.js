@@ -4,21 +4,26 @@ import React from 'react';
 /* Style */
 import styled from 'styled-components';
 
+/* UI-Kit */
+import { device } from '../../ui-kit/css-devices';
+
 /* Styled Components */
 const Image = styled.img`
-    width: 360px;
-    height: 360px;
-    border-radius: 100%;
-    margin-right: 82px;
+    border-radius: 50%;
 
-    @media (max-width: 768px) {
-        width: 280px;
-        height: 280px;
-        margin-right: 20px;
+    @media ${device.desktop} {
+        width: 360px;
+        height: 360px;
     }
 
-    @media (max-width: 375px) {
-        margin: 0 32px;
+    @media ${device.tablet} {
+        width: 280px;
+        height: 280px;
+    }
+
+    @media ${device.mobile} {
+        width: 280px;
+        height: 280px;
     }
 `;
 

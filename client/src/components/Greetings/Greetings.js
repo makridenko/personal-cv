@@ -4,20 +4,15 @@ import React from 'react';
 /* Style */
 import styled from 'styled-components';
 
+/* UI-Kit */
+import { device } from '../../ui-kit/css-devices';
+
 /* Styled components */
 const StyledGreetings = styled.div`
-    padding-top: 63px;
-
-    @media (max-width: 768px) {
-        padding-top: 23px;
-    }
-
-    @media (max-width: 375px) {
-        padding-top: 64px;
-    }
 `;
 
 const TitleContainer = styled.div`
+    color: #fff;
     h1 {
         font-family: IBM Plex Mono;
         font-style: normal;
@@ -25,18 +20,33 @@ const TitleContainer = styled.div`
         font-size: 34px;
         line-height: 44px;
         margin: 0;
-
-        color: #fff;
+        padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media ${device.desktop} {
+        padding-top: 63px;
+        width: 500px;
+
+        h1 {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+
+    @media ${device.tablet} {
+        padding-top: 23px;
+        width: 350px;
+
         h1 {
             font-size: 28px;
             line-height: 36px;
         }
     }
 
-    @media (max-width: 375px) {
+    @media ${device.mobile} {
+        padding-top: 64px;
+        width: 300px;
+
         h1 {
             font-size: 24px;
             line-height: 31px;
@@ -45,19 +55,24 @@ const TitleContainer = styled.div`
 `;
 
 const StyledLinks = styled.div`
-    margin-top: 104px;
     display: grid;
-    grid-template-columns: repeat(4, 48px);
-    grid-gap: 79px;
 
-    @media (max-width: 768px) {
-        margin-top: 120px;
+    @media ${device.desktop} {
+        padding-top: 104px;
+        grid-template-columns: repeat(4, 48px);
+        grid-gap: 79px;
+    }
+
+    @media ${device.tablet} {
+        padding-top: 120px;
+        grid-template-columns: repeat(4, 68px);
         grid-gap: 42.67px;
     }
 
-    @media (max-width: 375px) {
-        margin-top: 64px;
-        grid-gap: 44px;
+    @media ${device.mobile} {
+        padding-top: 64px;
+        grid-template-columns: repeat(4, 68px);
+        grid-gap: 24px;
     }
 `;
 
@@ -73,12 +88,15 @@ const OneLink = styled.a`
     font-family: IBM Plex Mono;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    padding-bottom: 6px;
     border-bottom: 1px solid #fff;
+    padding-bottom: 6px;
 
-    @media (max-width: 768px) {
+    @media ${device.desktop} {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    @media ${device.tablet}, ${device.mobile} {
         font-size: 14px;
         line-height: 18px;
     }
@@ -107,8 +125,7 @@ const Greetings = () => {
     return (
         <StyledGreetings>
             <TitleContainer>
-                <h1>Алексей Макриденко,</h1>
-                <h1>software engineer.</h1>
+                <h1>Алексей Макриденко, software engineer.</h1>
             </TitleContainer>
             <Links />
         </StyledGreetings>
