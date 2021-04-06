@@ -3,6 +3,7 @@ import React from 'react';
 
 /* Containers */
 import Header from './containers/Header';
+import Stack from './containers/Stack';
 
 /* Styles */
 import styled from 'styled-components';
@@ -38,6 +39,7 @@ const App = () => {
     <StyledApp>
       <Content>
         <Header />
+        <Stack />
       </Content>
     </StyledApp>
   );

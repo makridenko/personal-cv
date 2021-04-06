@@ -25,7 +25,7 @@ const InfoContainer = styled.div`
     }
 
     @media ${device.tablet} {
-        padding: 0 34px 0 28px;
+        padding: 0 28px 0 34px;
         margin-top: 192px;
     }
 
