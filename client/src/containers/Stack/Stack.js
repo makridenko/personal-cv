@@ -30,7 +30,12 @@ const StyledContainer = styled.div`
 
     @media ${device.mobile} {
         padding: 0 15.5px;
-        margin-top: 120px;
+        margin-top: 124px;
+    }
+
+    @media ${device.mobileS} {
+        padding: 0px 11px 0 9px;
+        margin-top: 124px;
     }
 `;
 

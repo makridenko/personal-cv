@@ -25,6 +25,11 @@ const Image = styled.img`
         width: 280px;
         height: 280px;
     }
+
+    @media ${device.mobileS} {
+        width: 280px;
+        height: 280px;
+    }
 `;
 
 const CVAvatar = () => <Image

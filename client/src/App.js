@@ -32,6 +32,10 @@ const Content = styled.div`
   @media ${device.mobile} {
     width: 375px;
   }
+
+  @media ${device.mobileS} {
+    width: 320px;
+  }
 `;
 
 const App = () => {
