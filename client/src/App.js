@@ -4,6 +4,7 @@ import React from 'react';
 /* Containers */
 import Header from './containers/Header';
 import Stack from './containers/Stack';
+import TableContainer from './containers/TableContainer';
 
 /* Styles */
 import styled from 'styled-components';
@@ -44,6 +45,8 @@ const App = () => {
       <Content>
         <Header />
         <Stack />
+        <TableContainer />
+        <TableContainer />
       </Content>
     </StyledApp>
   );
