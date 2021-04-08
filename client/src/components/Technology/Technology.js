@@ -45,6 +45,15 @@ const StyledTechnology = styled.div`
         grid-template-columns: repeat(3, 80px);
         grid-column-gap: 51px;
     }
+
+    @media ${device.mobileS} {
+        display: grid;
+        padding-top: 24px;
+        grid-template-rows: repeat(3, 80px);
+        grid-row-gap: 24px;
+        grid-template-columns: repeat(3, 80px);
+        grid-column-gap: 30px;
+    }
 `;
 
 const StyledOneTechnology = styled.div`

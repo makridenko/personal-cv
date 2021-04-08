@@ -15,10 +15,7 @@ const TitleContainer = styled.div`
     color: #fff;
     h1 {
         font-family: IBM Plex Mono;
-        font-style: normal;
         font-weight: 500;
-        font-size: 34px;
-        line-height: 44px;
         margin: 0;
         padding: 0;
     }
@@ -52,6 +49,11 @@ const TitleContainer = styled.div`
             line-height: 31px;
         }
     }
+
+    @media ${device.mobileS} {
+        padding-top: 64px;
+        width: 100%;
+    }
 `;
 
 const StyledLinks = styled.div`
@@ -59,20 +61,26 @@ const StyledLinks = styled.div`
 
     @media ${device.desktop} {
         padding-top: 104px;
-        grid-template-columns: repeat(4, 48px);
+        grid-template-columns: 58px 58px 48px 77px;
         grid-gap: 79px;
     }
 
     @media ${device.tablet} {
         padding-top: 120px;
-        grid-template-columns: repeat(4, 68px);
+        grid-template-columns: 51px 51px 42px 68px;
         grid-gap: 42.67px;
     }
 
     @media ${device.mobile} {
         padding-top: 64px;
-        grid-template-columns: repeat(4, 68px);
-        grid-gap: 24px;
+        grid-template-columns: 51px 51px 42px 68px;
+        grid-gap: 44px;
+    }
+
+    @media ${device.mobileS} {
+        padding-top: 64px;
+        grid-template-columns: 51px 51px 42px 68px;
+        grid-gap: 29px;
     }
 `;
 

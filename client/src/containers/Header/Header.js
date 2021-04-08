@@ -32,7 +32,13 @@ const InfoContainer = styled.div`
     @media ${device.mobile} {
         flex-direction: column-reverse;
         padding: 0 15.5px;
-        margin-top: 200px;
+        margin-top: 110px;
+    }
+
+    @media ${device.mobileS} {
+        flex-direction: column-reverse;
+        padding: 10.5px;
+        margin-top: 110px;
     }
 `;
 
@@ -48,6 +54,10 @@ const GreetContainer = styled.div`
     @media ${device.mobile} {
         width: 100%;
     }
+
+    @media ${device.mobileS} {
+        width: 100%;
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -61,6 +71,13 @@ const ImageContainer = styled.div`
 
     @media ${device.tablet} {
         width: 42%;
+    }
+
+    @media ${device.mobile} {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     @media ${device.mobile} {
