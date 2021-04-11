@@ -10,13 +10,10 @@ import { device } from '../../ui-kit/css-devices';
 /* Styled Components */
 const StyledContainer = styled.div`
     width: 100%;
-    border: 1px solid red;
 `;
 
 const StyledTableContainer = styled.div`
     display: flex;
-    background: tomato;
-    height: 100px;
 
     @media ${device.desktop} {
         padding: 0 128px;
@@ -35,18 +32,12 @@ const StyledTableContainer = styled.div`
     }
 `;
 
-const FakeContent = styled.div`
-    width: 100%;
-    height: 100%;
-    background: blue;
-`;
 
-
-const TableContainer = () => {
+const TableContainer = ({component}) => {
     return (
         <StyledContainer>
             <StyledTableContainer>
-                <FakeContent />
+                {component}
             </StyledTableContainer>
         </StyledContainer>
     );

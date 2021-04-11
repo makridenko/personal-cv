@@ -6,6 +6,9 @@ import Header from './containers/Header';
 import Stack from './containers/Stack';
 import TableContainer from './containers/TableContainer';
 
+/* Components */
+import EducationTable from './components/EducationTable';
+
 /* Styles */
 import styled from 'styled-components';
 
@@ -45,8 +48,9 @@ const App = () => {
       <Content>
         <Header />
         <Stack />
-        <TableContainer />
-        <TableContainer />
+        <TableContainer
+          component={<EducationTable />}
+        />
       </Content>
     </StyledApp>
   );
