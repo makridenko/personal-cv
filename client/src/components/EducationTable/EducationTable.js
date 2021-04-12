@@ -43,11 +43,19 @@ const Title = styled.h2`
     }
 `;
 
+const data = [
+    {dateFrom: 2015, dateTo: 2019, place: 'РТУ МИРЭА', project: 'Бакалавриат', spec: 'Прикладная математика и информатика'},
+    {dateFrom: 2019, dateTo: 2021, place: 'РТУ МИРЭА', project: 'Магистратура', spec: 'Прикладная математика и информатика'}
+]
+
 const EducationTable = () => {
     return (
         <StyledEducationTable>
             <Title>Образование</Title>
-            <Table titles={['Даты', 'ВУЗ', 'Специализация']}/>
+            <Table
+                titles={['Даты', 'ВУЗ', 'Специализация']}
+                data={data}
+            />
         </StyledEducationTable>
     );
 };
