@@ -25,6 +25,7 @@ const TitleContainer = styled.div`
 
     @media ${device.desktop} {
         padding-top: 63px;
+        margin-bottom: 104px;
         width: 500px;
 
         h1 {
@@ -35,6 +36,7 @@ const TitleContainer = styled.div`
 
     @media ${device.tablet} {
         padding-top: 23px;
+        margin-bottom: 120px;
         width: 350px;
 
         h1 {
@@ -45,6 +47,7 @@ const TitleContainer = styled.div`
 
     @media ${device.mobile} {
         padding-top: 64px;
+        margin-bottom: 64px;
         width: 300px;
 
         h1 {
