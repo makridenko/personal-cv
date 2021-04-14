@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './containers/Header';
 import Stack from './containers/Stack';
 import TableContainer from './containers/TableContainer';
+import Footer from './containers/Footer';
 
 /* Components */
 import EducationTable from './components/EducationTable';
@@ -21,7 +22,9 @@ const StyledApp = styled.div`
   height: 100%;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 
 const Content = styled.div`
@@ -52,6 +55,7 @@ const App = () => {
           component={<EducationTable />}
         />
       </Content>
+      <Footer />
     </StyledApp>
   );
 }
